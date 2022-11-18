@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PCB order form</title>
+        <link rel="stylesheet" href="./css/style_reset.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.c/om/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="./css/app.css">
+    </head>
+
+    <body>
+        <h1>Line Seiki Engineering Ordering Form</h1>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="text-light navbar-brand">Order category</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#order_type" aria-controls="order_type" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="order_type">
+                <div class="navbar-nav nav nav-tabs" role="tablist">
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#nav-content-pcb" role="tab" aria-controls="nav-content-pcb" aria-selected="true">PCB <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-content-mouser" role="tab" aria-controls="nav-content-mouser" aria-selected="false">Mouser</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-content-digikey" role="tab" aria-controls="nav-content-digikey" aria-selected="false">Digikey</a>
+                </div>
+            </div>
+        </nav>
+        <form>
+            <div class="container-fluid main_content mt-4">
+                <div class="row">
+                    <div class="col-6" id="person_details">
+                        <h2>Person Details</h2>
+                        <div class="form-group form-row">
+                            <label class="col-2 col-form-label" for="name">Name</label>
+                            <input type="text" class="form-control col-10" id="name">
+                        </div>
+                        <div class="form-group form-row">
+                            <label class="col-2 col-form-label">Section</label>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="section_items" class="form-check-input" id="PDE" value="PDE">
+                                <label class="form-check-label col-form-label" for="PDE">PDE</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="section_items" class="form-check-input" id="MDE" value="MDE">
+                                <label class="form-check-label col-form-label" for="MDE">MDE</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-row">
+                            <label class="col-2 col-form-label" for="purpose">Purpose</label>
+                            <input type="text" class="form-control col-10" id="purpose">
+                        </div>
+                        <div class="form-group form-row">
+                            <label class="col-2 col-form-label" for="date_needed">Date needed</label>
+                            <input type="date" class="form-control col-10" id="date_needed">
+                        </div>
+                    </div>
+                    <div class="col-6 order_details tab-content" id="order_form">
+                        <div class="tab-pane fade show active" id="nav-content-pcb" role="tabpanel" aria-labelledby="nav-pcb-tab">
+                            <h2>Order Details</h2>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">No. of layers</label>
+                                <input class="col-10 form-control" type="number" min="1" max="2">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Panelized?</label>
+                                <div class="col-10 pl-0">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="yes_panel">
+                                        <label class="form-check-label col-form-label" for="yes_panel">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="no_panel">
+                                        <label class="form-check-label col-form-label" for="no_panel">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">No. of pcb per panel</label>
+                                <input class="col-10 form-control" type="number" min="1">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">PCB Dimensions</label>
+                                <div class="col-5">
+                                    <div class="row">
+                                        <label for="pcb_width" class="col-form-label col-3">Width</label>
+                                        <input type="number" class="form-control col-3" id="pcb_width">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="row">
+                                        <label for="pcb_height" class="col-form-label col-3">Height</label>
+                                        <input type="number" class="form-control col-3" id="pcb_height">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Soldermask color</label>
+                                <input class="col-10 form-control" type="text">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Silkscreen color</label>
+                                <input class="col-10 form-control" type="text">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Material</label>
+                                <input class="col-10 form-control" type="text">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Copper weight (oz)</label>
+                                <input class="col-10 form-control" type="number" min="1" max="2">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Surface finish</label>
+                                <input class="col-10 form-control" type="text">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">PCB thickness</label>
+                                <input class="col-10 form-control" type="number" value="1.60" step="0.01">
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="col-2 col-form-label">Number of different designs per PCB</label>
+                                <input class="col-10 form-control" type="number">
+                            </div>
+                            <div class="form-group form-row" id="gerber_input">
+                                <label class="col-2 col-form-label">Gerber file</label>
+                                <input class="col-10 pl-0 form-control-file" type="file" accept="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-content-mouser" role="tabpanel" aria-labelledby="nav-mouser-tab">
+                            Mouser
+                        </div>
+                        <div class="tab-pane fade" id="nav-content-digikey" role="tabpanel" aria-labelledby="nav-digikey-tab">
+                            Digikey
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center button_row py-2">
+                    <div class="button_container col-4 d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger footer_buttons" id="btn-clr-personal">Clear Person Details</button>
+                    </div>
+                    <div class="button_container col-4 d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary footer_buttons" id="btn-submit">Submit</button>
+                    </div>
+                    <div class="button_container col-4 d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger footer_buttons" id="btn-clr-order">Clear Order Details</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal" tabindex="-1" id="bootstrap_modal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-danger">Modal title</h5>
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                    <button class="close close_icon_custom" data-dismiss="modal" aria-label="Close">
+                        <div></div>
+                        <div></div>
+                    </button>
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    <!-- <img id="close_icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSePWbM4WX948HqB7YsR8c73_gRVgx3flAa6fHEKBkXDg&s"> -->
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-danger">Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger modal-yes" data-dismiss="modal">Yes</button>
+                  <button type="button" class="btn btn-success modal-no" data-dismiss="modal">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script src="./js/jquery-v3.6.1.js"></script>
+        <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+
+</html>

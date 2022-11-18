@@ -1,0 +1,77 @@
+/*****************************General layout****************************************/
+h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+#person_details h2, .order_details h2 {
+    text-align: center;
+}
+
+#person_details, .order_details {
+    border: 2px solid black;
+}
+
+.order_details {
+    border-left: none;
+}
+
+.button_row {
+    border: 2px solid black;
+    border-top: 0;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: rgba(79, 82, 84, 0.6);
+}
+
+.navbar .navbar-nav .nav-link:hover:not(.active) {
+    transform: scale(1.2);
+}
+
+.navbar .navbar-nav .nav-link {
+    border: none;
+}
+
+.form-group {
+    align-items: center;
+}
+/************************************************************************************/
+
+/********************************For customized close icon***************************/
+#bootstrap_modal button.close {
+    padding: 0;
+    margin: 0;
+}
+
+.close_icon_custom>div:nth-child(1) {
+    height: 2rem;
+    width: 0.5rem;
+    background-color: red;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.close_icon_custom>div:nth-child(2) {
+    height: 2rem;
+    width: 0.5rem;
+    background-color: red;
+    transform: rotate(135deg);
+}
+/************************************************************************************/
+
+/********************************For modal*******************************************/
+#bootstrap_modal .modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+#bootstrap_modal .modal-body p {
+    font-weight: 700;
+}
+/************************************************************************************/
